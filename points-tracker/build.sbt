@@ -10,6 +10,7 @@ scalaVersion := "2.13.3"
 libraryDependencies += "com.github.pureconfig" %% "pureconfig" % "0.14.0"
 
 libraryDependencies += "org.scalatestplus.play" %% "scalatestplus-play" % "5.0.0" % Test
+libraryDependencies += "com.typesafe.akka" %% "akka-testkit" % "2.6.10" % Test
 
 // Adds additional packages into Twirl
 //TwirlKeys.templateImports += "ellen.controllers._"

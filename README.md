@@ -12,7 +12,11 @@ and processes requests to add new users, access user data, and modify user accou
 
 ### Install dependencies
 1. Install Java8: https://adoptopenjdk.net/?variant=openjdk8&jvmVariant=hotspot
-1. Install [sbt](https://www.scala-sbt.org/download.html): Can be installed in many ways, but would recommend using Homebrew: `brew install sbt`
+     * To verify on Mac OS X: run `java -version` and confirm the version is `1.8`
+2. Install [sbt](https://www.scala-sbt.org/download.html) version `1.3.13`. Can be installed in many ways, this is what I would recommend for Mac OS X users: 
+    * Install SDKMAN (Homebrew will not use Java 8 as required): https://sdkman.io/install
+    * `sdk install sbt 1.3.13`
+    * Verify: `sbt sbtVersion`
 
 ### Run the server
 1. Navigate to folder: `cd points-tracker/points-tracker`

@@ -1,12 +1,18 @@
 package module
 
-import controllers.PointsTrackerController
+import akka.actor.{ActorSystem, Props}
+import controllers.{PointsTrackerController, PointsTrackerControllerImpl}
+import database.PointsDataAccessActor
 import play.api.mvc.ControllerComponents
+
+import scala.concurrent.ExecutionContext
 
 trait PointsTrackerWebModule {
 
-  lazy val homeController = new PointsTrackerController(controllerComponents)
-
   val controllerComponents: ControllerComponents
+  implicit val ec: ExecutionContext
+  val actorSystem: ActorSystem
 
+  lazy val pointsDataAccessActor = actorSystem.actorOf(Props(classOf[PointsDataAccessActor], ec), name = "pointsDataAccessActor")
+  lazy val pointsTrackerController: PointsTrackerController = new PointsTrackerControllerImpl(pointsDataAccessActor, controllerComponents)
 }

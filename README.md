@@ -5,6 +5,7 @@
 points-tracker is a web server written in Scala using the [Play Framework](https://www.playframework.com/). It implements an in-memory data store using [Akka actors](https://doc.akka.io/docs/akka/current/actors.html)
 and processes requests to add new users, access user data, and modify user accounts.
 
+* routes: https://github.com/ellenglight/points-tracker/blob/main/points-tracker/conf/routes
 * application code: https://github.com/ellenglight/points-tracker/tree/main/points-tracker/app
 * tests: https://github.com/ellenglight/points-tracker/tree/main/points-tracker/test
 

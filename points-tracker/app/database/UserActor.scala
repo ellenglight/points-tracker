@@ -3,9 +3,10 @@ package database
 import java.time.{OffsetDateTime, ZoneOffset}
 
 import akka.actor.Actor
-import model.{Company, Points, UserPoints}
+import model.{Company, Points}
 import model.Company.Company
 import model.Error.LowBalanceException
+import model.data.UserPoints
 
 import scala.collection.immutable.Queue
 import scala.util.{Failure, Success, Try}

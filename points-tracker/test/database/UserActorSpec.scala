@@ -11,7 +11,8 @@ import akka.util.Timeout
 import database.UserActor.{AddNegativePoints, AddPositivePoints, DeductPoints, GetTotalPoints}
 import model.Company.{Company, Dannon, MillerCoors, Unilever}
 import model.Error.LowBalanceException
-import model.{Points, UserPoints}
+import model.Points
+import model.data.UserPoints
 import org.scalatest.{BeforeAndAfterAll, FlatSpecLike, Matchers}
 import org.scalatest.concurrent.{IntegrationPatience, ScalaFutures}
 

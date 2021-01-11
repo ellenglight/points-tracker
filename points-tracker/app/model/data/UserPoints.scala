@@ -1,8 +1,9 @@
-package model
+package model.data
 
 import java.time.OffsetDateTime
 
 import model.Company.Company
+import model.Points
 
 import scala.collection.immutable.Queue
 
@@ -29,10 +30,3 @@ class UserPoints(
 object UserPoints {
   def apply(): UserPoints = new UserPoints(Queue.empty[Points], Map.empty[Company, Int])
 }
-
-
-case class Points(
-  value: Int,
-  date: OffsetDateTime,
-  company: Company
-)

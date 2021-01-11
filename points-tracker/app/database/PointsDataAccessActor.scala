@@ -8,7 +8,8 @@ import akka.pattern.ask
 import akka.util.Timeout
 import model.Company.Company
 import model.Error.UserDoesNotExistException
-import model.{Points, UserPoints}
+import model.Points
+import model.data.UserPoints
 
 import scala.collection.mutable.HashMap
 import scala.concurrent.{ExecutionContext, Future}
